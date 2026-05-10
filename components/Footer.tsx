@@ -86,12 +86,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-500">
-            © {new Date().getFullYear()} Waqar Rajpoot. All rights reserved.
-          </p>
-          <p className="text-xs text-gray-500 flex items-center gap-1">
-            Built with <Heart size={11} className="text-orange-500 fill-orange-500" /> using Next.js & Tailwind CSS
+        <div className="border-t border-white/5 pt-8 flex items-center justify-center">
+          <p className="text-xs text-gray-500 flex items-center gap-1.5">
+            © {new Date().getFullYear()} Waqar Rajpoot.
+            <Heart size={11} className="text-orange-500 fill-orange-500" />
+            All rights reserved.
           </p>
         </div>
       </div>
