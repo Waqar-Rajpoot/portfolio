@@ -128,9 +128,9 @@ export const projects = [
 export const techStack = {
   Frontend: ["Next.js", "React.js", "TypeScript", "Tailwind CSS", "Shadcn/UI", "Framer Motion"],
   Backend: ["Node.js", "Express.js", "Next.js API Routes", "Server Actions"],
-  Database: ["MongoDB", "Mongoose"],
-  Auth: ["NextAuth.js", "JWT", "bcryptjs", "2FA / OTP"],
+  Database: ["MongoDB", "Mongoose", "Firebase", "Firestore"],
+  Auth: ["NextAuth.js", "BetterAuth.js", "Clerk Auth", "JWT", "bcryptjs", "2FA / OTP"],
   Payments: ["Stripe"],
-  DevOps: ["Vercel", "Git", "GitHub"],
-  Tools: ["VS Code", "Postman", "ImageKit", "Resend"],
+  DevOps: ["Vercel", "AWS (S3/EC2)", "Git", "GitHub"], 
+  Tools: ["VS Code", "Postman", "ImageKit", "Resend", "Nodemailer"],
 };

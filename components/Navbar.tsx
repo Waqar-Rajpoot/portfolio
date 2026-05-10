@@ -26,6 +26,26 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleDesktopNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: any) => {
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleMobileNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: any) => {
+    e.preventDefault();
+    setMobileOpen(false);
+    // 300ms matches the AnimatePresence exit animation duration
+    setTimeout(() => {
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 300);
+  };
+
   return (
     <motion.nav
       initial={{ y: -80, opacity: 0 }}
@@ -33,7 +53,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 dark:bg-[#0a0a0a]/90 backdrop-blur-md shadow-lg shadow-black/20 border-b border-gray-200 dark:border-white/5"
+          ? "bg-white/90 dark:bg-bg-dark/90 backdrop-blur-md shadow-lg shadow-black/20 border-b border-gray-200 dark:border-white/5"
           : "bg-transparent"
       }`}
     >
@@ -42,6 +62,7 @@ export default function Navbar() {
           {/* Logo */}
           <motion.a
             href="#home"
+            onClick={(e) => handleDesktopNavClick(e, "#home")}
             whileHover={{ scale: 1.05 }}
             className="text-xl font-bold"
           >
@@ -56,6 +77,7 @@ export default function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
+                onClick={(e) => handleDesktopNavClick(e, link.href)}
                 className="text-sm text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-500 transition-colors duration-200 font-medium"
               >
                 {link.label}
@@ -77,9 +99,10 @@ export default function Navbar() {
               </motion.button>
             )}
 
-            {/* Hire Me Button */}
+            {/* Hire Me Button — Desktop */}
             <motion.a
               href="#contact"
+              onClick={(e) => handleDesktopNavClick(e, "#contact")}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="hidden md:flex items-center px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold rounded-lg transition-colors duration-200"
@@ -87,7 +110,7 @@ export default function Navbar() {
               Hire Me
             </motion.a>
 
-            {/* Mobile menu button */}
+            {/* Mobile menu toggle */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="md:hidden p-2 text-gray-700 dark:text-gray-300"
@@ -105,22 +128,25 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white dark:bg-[#111111] border-t border-gray-200 dark:border-white/5"
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="md:hidden bg-white dark:bg-bg-card-dark border-t border-gray-200 dark:border-white/5 overflow-hidden"
           >
             <div className="px-4 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => handleMobileNavClick(e, link.href)}
                   className="text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-500 font-medium transition-colors"
                 >
                   {link.label}
                 </a>
               ))}
+
+              {/* Hire Me Button — Mobile */}
               <a
                 href="#contact"
-                onClick={() => setMobileOpen(false)}
+                onClick={(e) => handleMobileNavClick(e, "#contact")}
                 className="px-4 py-2 bg-orange-500 text-white text-sm font-semibold rounded-lg text-center"
               >
                 Hire Me
