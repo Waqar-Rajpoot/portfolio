@@ -11,7 +11,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white dark:bg-[#0a0a0a] text-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <main className="min-h-screen bg-white dark:bg-bg-dark text-gray-900 dark:text-gray-100 overflow-x-hidden">
       <Navbar />
       <Hero />
       <Services />

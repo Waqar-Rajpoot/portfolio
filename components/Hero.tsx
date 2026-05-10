@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-[#0a0a0a] pt-16"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-bg-dark pt-16"
     >
       {/* Background grid */}
       <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.07]"
@@ -22,8 +22,8 @@ export default function Hero() {
       />
 
       {/* Orange radial glow */}
-      <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-orange-500/10 dark:bg-orange-500/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 left-1/4 w-[300px] h-[300px] bg-orange-500/5 rounded-full blur-[80px] pointer-events-none" />
+      <div className="absolute top-1/4 right-1/4 w-125 h-125 bg-orange-500/10 dark:bg-orange-500/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 left-1/4 w-75 h-75 bg-orange-500/5 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -160,7 +160,7 @@ export default function Hero() {
     />
 
     {/* Enlarged Image Circle */}
-    <div className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full overflow-hidden border-4 border-orange-500 orange-glow bg-gradient-to-br from-orange-500/20 to-gray-900">
+    <div className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full overflow-hidden border-4 border-orange-500 orange-glow bg-linear-to-br from-orange-500/20 to-gray-900">
       <Image
         src="/profile.png"
         alt="Waqar Rajpoot - Full Stack Developer"
@@ -171,7 +171,7 @@ export default function Hero() {
         className="object-cover object-[center_25%]" 
       />
       
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent pointer-events-none" />
     </div>
 
     {/* Floating badges - Adjusted positioning for larger circle */}

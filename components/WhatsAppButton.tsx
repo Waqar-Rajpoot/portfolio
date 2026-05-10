@@ -23,7 +23,7 @@ export default function WhatsAppButton() {
             <div className="font-semibold text-green-400">💬 Chat with Waqar</div>
             <div className="text-xs text-gray-400 mt-0.5">Usually replies in minutes</div>
             {/* Arrow */}
-            <div className="absolute right-[-6px] top-1/2 -translate-y-1/2 w-3 h-3 bg-gray-900 dark:bg-[#111] border-r border-t border-white/10 rotate-45" />
+            <div className="absolute -right-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-gray-900 dark:bg-[#111] border-r border-t border-white/10 rotate-45" />
           </motion.div>
         )}
       </AnimatePresence>

@@ -46,12 +46,12 @@ export default function Services() {
           viewport={{ once: true }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {services.map((service, i) => (
+          {services.map((service) => (
             <motion.div
               key={service.title}
               variants={cardVariants}
               whileHover={{ y: -6, scale: 1.02 }}
-              className="group p-6 rounded-2xl bg-white dark:bg-[#111111] border border-gray-100 dark:border-white/5 hover:border-orange-500/50 dark:hover:border-orange-500/30 transition-all duration-300 cursor-default shadow-sm hover:shadow-orange-500/10 hover:shadow-lg"
+              className="group p-6 rounded-2xl bg-white dark:bg-bg-card-dark border border-gray-100 dark:border-white/5 hover:border-orange-500/50 dark:hover:border-orange-500/30 transition-all duration-300 cursor-default shadow-sm hover:shadow-orange-500/10 hover:shadow-lg"
             >
               <div className="text-4xl mb-4">{service.icon}</div>
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-orange-500 transition-colors duration-200">

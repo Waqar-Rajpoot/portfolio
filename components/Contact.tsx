@@ -53,8 +53,8 @@ export default function Contact() {
           </h2>
           <div className="w-16 h-1 bg-orange-500 mx-auto rounded-full" />
           <p className="text-gray-500 dark:text-gray-400 mt-4 max-w-xl mx-auto">
-            Have a project in mind? Let's build something amazing together.
-            Reach out and I'll get back to you within 24 hours.
+            Have a project in mind? Let&apos;s build something amazing together.
+            Reach out and I&apos;ll get back to you within 24 hours.
           </p>
         </motion.div>
 
@@ -69,13 +69,13 @@ export default function Contact() {
           >
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                Let's work together
+                Let&apos;s work together
               </h3>
               <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
-                I'm currently open to new opportunities — freelance projects,
+                I&apos;m currently open to new opportunities — freelance projects,
                 full-time roles, or exciting collaborations. Whether you need a
                 complete web application or want to discuss a technical
-                challenge, I'm here.
+                challenge, I&apos;m here.
               </p>
             </div>
 
@@ -90,7 +90,7 @@ export default function Contact() {
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-4 p-4 bg-white dark:bg-[#111] rounded-xl border border-gray-100 dark:border-white/5 hover:border-orange-500/30 transition-all duration-200 group"
                 >
-                  <div className="w-10 h-10 bg-orange-500/10 border border-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-orange-500/10 border border-orange-500/20 rounded-xl flex items-center justify-center shrink-0">
                     <Icon size={18} className="text-orange-500" />
                   </div>
                   <div>

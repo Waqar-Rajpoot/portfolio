@@ -5,8 +5,8 @@ export const personalInfo = {
   tagline: "Specializing in high-performance, production-ready applications",
   location: "Sahiwal, Punjab, Pakistan",
   email: "waqar.softwaredev@gmail.com",
-  phone: "+92 3206913949", // Update with real number
-  whatsapp: "923206913949",  // Update with real WhatsApp number (no + or spaces)
+  phone: "+92 3206913949", 
+  whatsapp: "923206913949", 
   github: "https://github.com/Waqar-Rajpoot",
   linkedin: "https://linkedin.com/in/waqar-rajpoot",
   education: "BSIT — Govt College Sahiwal (2021–2025)",

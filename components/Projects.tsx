@@ -18,7 +18,7 @@ export default function Projects() {
       : projects.filter((p) => p.category === activeFilter);
 
   return (
-    <section id="projects" className="py-24 bg-white dark:bg-[#0a0a0a]">
+    <section id="projects" className="py-24 bg-white dark:bg-bg-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -78,7 +78,7 @@ export default function Projects() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3, delay: i * 0.07 }}
                 whileHover={{ y: -6 }}
-                className="group relative p-6 bg-gray-50 dark:bg-[#111111] rounded-2xl border border-gray-100 dark:border-white/5 hover:border-orange-500/40 transition-all duration-300 flex flex-col shadow-sm hover:shadow-orange-500/10 hover:shadow-xl"
+                className="group relative p-6 bg-gray-50 dark:bg-bg-dark rounded-2xl border border-gray-100 dark:border-white/5 hover:border-orange-500/40 transition-all duration-300 flex flex-col shadow-sm hover:shadow-orange-500/10 hover:shadow-xl"
               >
                 {/* Featured badge */}
                 {project.featured && (

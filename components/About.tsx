@@ -6,7 +6,7 @@ import { MapPin, GraduationCap, Target, Code2 } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-white dark:bg-[#0a0a0a]">
+    <section id="about" className="py-24 bg-white dark:bg-bg-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left — Visual */}
@@ -20,7 +20,7 @@ export default function About() {
             {/* Image container */}
             <div className="relative w-full max-w-sm mx-auto">
               <div className="absolute inset-0 bg-orange-500 rounded-3xl translate-x-3 translate-y-3 opacity-20" />
-              <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 dark:from-[#111] dark:to-[#1a1a1a] rounded-3xl overflow-hidden aspect-[4/5] border border-gray-200 dark:border-white/5 flex items-center justify-center">
+              <div className="relative bg-linear-to-br from-gray-100 to-gray-200 dark:from-[#111] dark:to-[#1a1a1a] rounded-3xl overflow-hidden aspect-4/5 border border-gray-200 dark:border-white/5 flex items-center justify-center">
                 <div className="text-center p-8">
                   <div className="text-9xl font-black text-orange-500 opacity-20 mb-4">WR</div>
                   <div className="text-gray-700 dark:text-gray-300 font-bold text-xl">Waqar Rajpoot</div>
@@ -73,7 +73,7 @@ export default function About() {
                 { icon: Code2, label: "Core Expertise", value: "Next.js Server Actions · Atomic MongoDB Updates · RBAC" },
               ].map(({ icon: Icon, label, value }) => (
                 <div key={label} className="flex gap-3 items-start">
-                  <div className="flex-shrink-0 w-8 h-8 bg-orange-500/10 border border-orange-500/20 rounded-lg flex items-center justify-center mt-0.5">
+                  <div className="shrink-0 w-8 h-8 bg-orange-500/10 border border-orange-500/20 rounded-lg flex items-center justify-center mt-0.5">
                     <Icon size={14} className="text-orange-500" />
                   </div>
                   <div>
