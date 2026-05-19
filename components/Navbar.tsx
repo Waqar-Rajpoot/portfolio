@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sun, Moon, Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -60,16 +61,20 @@ export default function Navbar() {
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <motion.a
-            href="#home"
-            onClick={(e) => handleDesktopNavClick(e, "#home")}
-            whileHover={{ scale: 1.05 }}
-            className="text-xl font-bold"
-          >
-            <span className="text-orange-500">W</span>
-            <span className="text-gray-900 dark:text-white">aqar</span>
-            <span className="text-orange-500">.</span>
-          </motion.a>
+  <motion.a
+  href="#home"
+  onClick={(e) => handleDesktopNavClick(e, "#home")}
+  whileHover={{ scale: 1.05 }}
+  className="flex items-center"
+>
+  <Image
+    src="/logo.png"
+    alt="Logo"
+    width={45}
+    height={45}
+    className="object-contain"
+  />
+</motion.a>
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-8">

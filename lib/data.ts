@@ -123,6 +123,16 @@ export const projects = [
     category: "Auth",
     featured: false,
   },
+  {
+    title: "Authentication with nextAuth",
+    description:
+      " Complete authentication system with NextAuth.js, including sign up, sign in, email verification, 2FA, and password reset flows.",
+    tech: ["Next.js", "NextAuth", "MongoDB", "bcryptjs"],
+    github: "https://github.com/Waqar-Rajpoot/Authentication-with-nextAuth",
+    live: "#",
+    category: "Auth",
+    featured: false,
+  },
 ];
 
 export const techStack = {
@@ -132,5 +142,5 @@ export const techStack = {
   Auth: ["NextAuth.js", "BetterAuth.js", "Clerk Auth", "JWT", "bcryptjs", "2FA / OTP"],
   Payments: ["Stripe"],
   DevOps: ["Vercel", "AWS (S3/EC2)", "Git", "GitHub"], 
-  Tools: ["VS Code", "Postman", "ImageKit", "Resend", "Nodemailer"],
+  Tools: ["VS Code", "Postman", "ImageKit", "Resend", "Nodemailer", "Cloudinary"],
 };

@@ -108,6 +108,16 @@ export default function Hero() {
               >
                 Hire Me
               </motion.a>
+              <motion.a
+                href="/Waqar-Rajpoot-CV.pdf"
+                download="Waqar-Rajpoot-CV.pdf"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-6 py-3 border border-orange-500/50 hover:border-orange-500 text-gray-900 dark:text-white hover:text-orange-500 font-semibold rounded-xl transition-all duration-200 flex items-center gap-2"
+              >
+                <ArrowDown size={16} />
+                Download CV
+              </motion.a>
             </motion.div>
 
             {/* Social Icons */}
@@ -140,58 +150,57 @@ export default function Hero() {
 
           {/* Right — Avatar / Visual */}
           <motion.div
-  initial={{ opacity: 0, scale: 0.85, x: 50 }}
-  animate={{ opacity: 1, scale: 1, x: 0 }}
-  transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-  className="relative flex justify-center lg:justify-end mt-12 lg:mt-16" // Added Top Margin
->
-  {/* Decorative ring container */}
-  <div className="relative">
-    {/* Rotating Rings */}
-    <motion.div
-      animate={{ rotate: 360 }}
-      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-      className="absolute inset-0 rounded-full border-2 border-dashed border-orange-500/30 scale-110"
-    />
-    <motion.div
-      animate={{ rotate: -360 }}
-      transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-      className="absolute inset-0 rounded-full border border-orange-500/10 scale-125"
-    />
+            initial={{ opacity: 0, scale: 0.85, x: 50 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            className="relative flex justify-center lg:justify-end mt-12 lg:mt-16" // Added Top Margin
+          >
+            {/* Decorative ring container */}
+            <div className="relative">
+              {/* Rotating Rings */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 rounded-full border-2 border-dashed border-orange-500/30 scale-110"
+              />
+              <motion.div
+                animate={{ rotate: -360 }}
+                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 rounded-full border border-orange-500/10 scale-125"
+              />
 
-    {/* Enlarged Image Circle */}
-    <div className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full overflow-hidden border-4 border-orange-500 orange-glow bg-linear-to-br from-orange-500/20 to-gray-900">
-      <Image
-        src="/profile.png"
-        alt="Waqar Rajpoot - Full Stack Developer"
-        fill
-        priority
-        sizes="(max-width: 640px) 320px, 384px"
-        // Changed object-center to object-[center_20%] to pull the face upward
-        className="object-cover object-[center_25%]" 
-      />
-      
-      <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent pointer-events-none" />
-    </div>
+              {/* Enlarged Image Circle */}
+              <div className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full overflow-hidden border-4 border-orange-500 orange-glow bg-linear-to-br from-orange-500/20 to-gray-900">
+                <Image
+                  src="/profile.png"
+                  alt="Waqar Rajpoot - Full Stack Developer"
+                  fill
+                  priority
+                  sizes="(max-width: 640px) 320px, 384px"
+                  className="object-cover object-[center_25%]"
+                />
 
-    {/* Floating badges - Adjusted positioning for larger circle */}
-    <motion.div
-      animate={{ y: [-5, 5, -5] }}
-      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-      className="absolute top-2 -right-2 z-10 bg-orange-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg"
-    >
-      Next.js 15 ✦
-    </motion.div>
-    
-    <motion.div
-      animate={{ y: [5, -5, 5] }}
-      transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-      className="absolute bottom-2 -left-2 z-10 bg-gray-900 dark:bg-gray-800 text-orange-500 text-xs font-bold px-4 py-2 rounded-full border border-orange-500/50 shadow-lg"
-    >
-      TypeScript ✦
-    </motion.div>
-  </div>
-</motion.div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent pointer-events-none" />
+              </div>
+
+              {/* Floating badges - Adjusted positioning for larger circle */}
+              <motion.div
+                animate={{ y: [-5, 5, -5] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-2 -right-2 z-10 bg-orange-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg"
+              >
+                Next.js 15 ✦
+              </motion.div>
+
+              <motion.div
+                animate={{ y: [5, -5, 5] }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute bottom-2 -left-2 z-10 bg-gray-900 dark:bg-gray-800 text-orange-500 text-xs font-bold px-4 py-2 rounded-full border border-orange-500/50 shadow-lg"
+              >
+                TypeScript ✦
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       </div>
 
@@ -199,7 +208,8 @@ export default function Hero() {
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400 dark:text-gray-600"
+        onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400 dark:text-gray-600 cursor-pointer hover:text-orange-500 transition-colors duration-200"
       >
         <span className="text-xs font-mono tracking-widest uppercase">Scroll</span>
         <ArrowDown size={14} />
